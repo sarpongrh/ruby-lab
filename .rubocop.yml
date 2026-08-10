@@ -4,3 +4,18 @@ AllCops:
 
 Layout/LineLength:
   Max: 100
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/OneClassPerFile:
+  Exclude:
+    - ruby-literacy/variable_naming_rules.rb
+
+Style/ClassVars:
+  Exclude:
+    - ruby-literacy/variable_naming_rules.rb
+
+Style/GlobalVars:
+  Exclude:
+    - ruby-literacy/variable_naming_rules.rb
