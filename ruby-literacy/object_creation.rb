@@ -36,3 +36,12 @@ end
 def ticket.available?
   false
 end
+
+def ticket.print_details(*details)
+  details.each { |detail| puts "This ticket is #{detail}" }
+  puts 'This ticket is non-refundable.'
+  puts 'This ticket is non-transferable.'
+  puts 'This ticket is in a non-smoking section.'
+end
+
+ticket.print_details(ticket.availability_status)

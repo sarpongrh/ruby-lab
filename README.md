@@ -1,9 +1,11 @@
 # Ruby Lab
 
-Focused Ruby language practice backend-oriented experiments.
+Focused Ruby language practice and small programming experiments.
 
 ## Covered
 
 - Local, instance, class, and global variables
 - Classes, constructors, instance methods, and class methods
+- Required, default, splat, and mixed method arguments
+- Local scope, object references, duplication, and freezing
 - String interpolation
