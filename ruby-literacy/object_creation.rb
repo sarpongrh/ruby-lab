@@ -44,4 +44,4 @@ def ticket.print_details(*details)
   puts 'This ticket is in a non-smoking section.'
 end
 
-ticket.print_details
+ticket.print_details(ticket.availability_status)

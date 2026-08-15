@@ -6,11 +6,11 @@ end
 # change_string(s)
 # puts s
 
-# Duping and freezing - protects objects from being changes inside methods
+# Duplication protects the original object; freezing prevents mutation.
 s = 'Original string content!'
 change_string(s.dup) # to duplicate an object
 puts s
 
 # s = "Original string content!"
 # s.freeze
-# change_string(snd
+# change_string(s)
