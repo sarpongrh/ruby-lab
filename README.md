@@ -6,6 +6,8 @@ Focused Ruby language practice and small programming experiments.
 
 - Local, instance, class, and global variables
 - Classes, constructors, instance methods, and class methods
+- Instance variables, object state, and explicit getter and setter methods
+- Reopening classes and assignment-method behavior
 - Required, default, splat, and mixed method arguments
 - Local scope, object references, duplication, and freezing
 - String interpolation
