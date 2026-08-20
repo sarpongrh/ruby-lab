@@ -11,3 +11,4 @@ Focused Ruby language practice and small programming experiments.
 - Required, default, splat, and mixed method arguments
 - Local scope, object references, duplication, and freezing
 - String interpolation
+- Inheritance, subclasses, and anonymous classes
