@@ -16,6 +16,7 @@ Style/OneClassPerFile:
     - ruby-literacy/variable_naming_rules.rb
     - ruby-literacy/define_a_class.rb
     - ruby-literacy/setter_methods.rb
+    - ruby-literacy/inheritance.rb
 
 Style/TrivialAccessors:
   Exclude:
