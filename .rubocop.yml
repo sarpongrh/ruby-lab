@@ -44,3 +44,7 @@ Style/ClassVars:
 Style/GlobalVars:
   Exclude:
     - ruby-literacy/variable_naming_rules.rb
+
+Style/MutableConstant:
+  Exclude:
+    - 'ruby-literacy/constants.rb'
