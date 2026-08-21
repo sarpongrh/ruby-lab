@@ -17,6 +17,7 @@ Style/OneClassPerFile:
     - ruby-literacy/define_a_class.rb
     - ruby-literacy/setter_methods.rb
     - ruby-literacy/inheritance.rb
+    - ruby-literacy/creating_a_module.rb
 
 Style/TrivialAccessors:
   Exclude:
