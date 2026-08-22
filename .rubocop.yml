@@ -13,39 +13,40 @@ Style/Documentation:
 
 Style/OneClassPerFile:
   Exclude:
-    - ruby-literacy/variable_naming_rules.rb
-    - ruby-literacy/define_a_class.rb
-    - ruby-literacy/setter_methods.rb
-    - ruby-literacy/inheritance.rb
-    - ruby-literacy/creating_a_module.rb
+    - ruby-literacy/fundamentals/variable_naming_rules.rb
+    - ruby-literacy/objects_and_classes/define_a_class.rb
+    - ruby-literacy/objects_and_classes/setter_methods.rb
+    - ruby-literacy/methods_and_inheritance/inheritance.rb
+    - ruby-literacy/modules/creating_a_module.rb
+    - ruby-literacy/methods_and_inheritance/method_hierarchies.rb
 
 Style/TrivialAccessors:
   Exclude:
     - programs/setter_and_getter.rb
-    - ruby-literacy/initialize_obj_with_state.rb
-    - ruby-literacy/setter_methods.rb
+    - ruby-literacy/objects_and_classes/initialize_obj_with_state.rb
+    - ruby-literacy/objects_and_classes/setter_methods.rb
 
 Style/FormatString:
   Exclude:
     - programs/setter_and_getter.rb
-    - ruby-literacy/setter_methods.rb
+    - ruby-literacy/objects_and_classes/setter_methods.rb
 
 Naming/AccessorMethodName:
   Exclude:
-    - ruby-literacy/instance_var_and_obj_state.rb
+    - ruby-literacy/objects_and_classes/instance_var_and_obj_state.rb
 
 Lint/EmptyClass:
   Exclude:
-    - ruby-literacy/define_a_class.rb
+    - ruby-literacy/objects_and_classes/define_a_class.rb
 
 Style/ClassVars:
   Exclude:
-    - ruby-literacy/variable_naming_rules.rb
+    - ruby-literacy/fundamentals/variable_naming_rules.rb
 
 Style/GlobalVars:
   Exclude:
-    - ruby-literacy/variable_naming_rules.rb
+    - ruby-literacy/fundamentals/variable_naming_rules.rb
 
 Style/MutableConstant:
   Exclude:
-    - 'ruby-literacy/constants.rb'
+    - ruby-literacy/fundamentals/constants.rb
