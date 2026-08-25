@@ -1,7 +1,3 @@
-## Summary
-
-<!-- Briefly explain what this pull request accomplishes. -->
-
 ## Changes
 
 -

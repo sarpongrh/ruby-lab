@@ -34,6 +34,13 @@ The repository uses Ruby 4.0.6. Language references point to the
 - References: [classes](https://docs.ruby-lang.org/en/4.0/Class.html) and
   [modules and classes](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html)
 
+### Default Object Self and Scope
+
+- Examples: [implicit `self` in method calls](ruby-literacy/default_object_self_and_scope/method_calls_on_self.rb)
+  and [global and local variable scope](ruby-literacy/default_object_self_and_scope/scope_and_visibility.rb)
+- References: [calling methods and receivers](https://docs.ruby-lang.org/en/4.0/syntax/calling_methods_rdoc.html)
+  and [scope](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html)
+
 ### Methods and Inheritance
 
 - Examples: [method arguments](ruby-literacy/methods_and_inheritance/method_arguments.rb),
