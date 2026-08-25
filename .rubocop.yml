@@ -18,6 +18,7 @@ Style/OneClassPerFile:
     - ruby-literacy/objects_and_classes/setter_methods.rb
     - ruby-literacy/methods_and_inheritance/inheritance.rb
     - ruby-literacy/modules/creating_a_module.rb
+    - ruby-literacy/default_object_self_and_scope/scope_and_visibility.rb
     - ruby-literacy/methods_and_inheritance/method_hierarchies.rb
 
 Style/TrivialAccessors:
@@ -46,6 +47,7 @@ Style/ClassVars:
 Style/GlobalVars:
   Exclude:
     - ruby-literacy/fundamentals/variable_naming_rules.rb
+    - ruby-literacy/default_object_self_and_scope/scope_and_visibility.rb
 
 Style/MutableConstant:
   Exclude:
