@@ -30,9 +30,11 @@ The repository uses Ruby 4.0.6. Language references point to the
   [setter methods](ruby-literacy/objects_and_classes/setter_methods.rb),
   [validated setters](ruby-literacy/objects_and_classes/validated_setter.rb),
   [attribute accessors](ruby-literacy/objects_and_classes/attribute_accessors.rb), and
-  [anonymous classes](ruby-literacy/objects_and_classes/anonymous_classes.rb)
+  [anonymous classes](ruby-literacy/objects_and_classes/anonymous_classes.rb), and
+  [class variables](ruby-literacy/objects_and_classes/class_variables.rb)
 - References: [classes](https://docs.ruby-lang.org/en/4.0/Class.html) and
-  [modules and classes](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html)
+  [modules and classes](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html), and
+  [assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/assignment_rdoc.html)
 
 ### Default Object Self and Scope
 

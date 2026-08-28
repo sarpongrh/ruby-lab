@@ -20,6 +20,7 @@ Style/OneClassPerFile:
     - ruby-literacy/modules/creating_a_module.rb
     - ruby-literacy/default_object_self_and_scope/scope_and_visibility.rb
     - ruby-literacy/methods_and_inheritance/method_hierarchies.rb
+    - ruby-literacy/objects_and_classes/class_variables.rb
 
 Style/TrivialAccessors:
   Exclude:
@@ -43,6 +44,7 @@ Lint/EmptyClass:
 Style/ClassVars:
   Exclude:
     - ruby-literacy/fundamentals/variable_naming_rules.rb
+    - ruby-literacy/objects_and_classes/class_variables.rb
 
 Style/GlobalVars:
   Exclude:
