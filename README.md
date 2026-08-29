@@ -30,8 +30,9 @@ The repository uses Ruby 4.0.6. Language references point to the
   [setter methods](ruby-literacy/objects_and_classes/setter_methods.rb),
   [validated setters](ruby-literacy/objects_and_classes/validated_setter.rb),
   [attribute accessors](ruby-literacy/objects_and_classes/attribute_accessors.rb), and
-  [anonymous classes](ruby-literacy/objects_and_classes/anonymous_classes.rb), and
-  [class variables](ruby-literacy/objects_and_classes/class_variables.rb)
+  [anonymous classes](ruby-literacy/objects_and_classes/anonymous_classes.rb),
+  [class variables](ruby-literacy/objects_and_classes/class_variables.rb), and
+  [class instance variables](ruby-literacy/objects_and_classes/class_instance_variables.rb)
 - References: [classes](https://docs.ruby-lang.org/en/4.0/Class.html) and
   [modules and classes](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html), and
   [assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/assignment_rdoc.html)
@@ -48,9 +49,10 @@ The repository uses Ruby 4.0.6. Language references point to the
 - Examples: [method arguments](ruby-literacy/methods_and_inheritance/method_arguments.rb),
   [inheritance](ruby-literacy/methods_and_inheritance/inheritance.rb),
   [method hierarchies](ruby-literacy/methods_and_inheritance/method_hierarchies.rb), and
-  [`method_missing` and `super`](ruby-literacy/methods_and_inheritance/method_missing_and_super.rb)
+  [`method_missing` and `super`](ruby-literacy/methods_and_inheritance/method_missing_and_super.rb), and
+  [private methods](ruby-literacy/methods_and_inheritance/private_methods.rb)
 - References: [method definitions and arguments](https://docs.ruby-lang.org/en/4.0/syntax/methods_rdoc.html),
-  [inheritance and `super`](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html),
+  [inheritance, visibility, and `super`](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html),
   [`Method`](https://docs.ruby-lang.org/en/4.0/Method.html), and
   [`BasicObject#method_missing`](https://docs.ruby-lang.org/en/4.0/BasicObject.html)
 
