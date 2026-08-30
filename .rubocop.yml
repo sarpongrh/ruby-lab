@@ -22,6 +22,8 @@ Style/OneClassPerFile:
     - ruby-literacy/methods_and_inheritance/method_hierarchies.rb
     - ruby-literacy/objects_and_classes/class_variables.rb
     - ruby-literacy/objects_and_classes/class_instance_variables.rb
+    - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+
 
 Style/TrivialAccessors:
   Exclude:
@@ -55,3 +57,27 @@ Style/GlobalVars:
 Style/MutableConstant:
   Exclude:
     - ruby-literacy/fundamentals/constants.rb
+
+Style/IfWithBooleanLiteralBranches:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+
+Style/RedundantConditional:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+
+Style/UnlessElse:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+
+Style/NegatedIfElseCondition:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+
+Style/InverseMethods:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+
+Lint/DuplicateBranch:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
