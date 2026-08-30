@@ -22,7 +22,8 @@ The repository uses Ruby 4.0.6. Language references point to the
 ### Control Flow Techniques
 
 - Examples: [`if`, `elsif`, and `else`](ruby-literacy/control_flow_techniques/if_elsif_else.rb)
-  for entitlement decisions in a reading application
+  for entitlement decisions in a reading application, and
+  [conditional modifiers](ruby-literacy/control_flow_techniques/conditional_modifiers.rb)
 - Reference: [control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html)
 
 ### Objects and Classes
