@@ -19,6 +19,12 @@ The repository uses Ruby 4.0.6. Language references point to the
   [local scope](ruby-literacy/fundamentals/local_variable_scope.rb)
 - Reference: [assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/assignment_rdoc.html)
 
+### Control Flow Techniques
+
+- Examples: [`if`, `elsif`, and `else`](ruby-literacy/control_flow_techniques/if_elsif_else.rb)
+  for entitlement decisions in a reading application
+- Reference: [control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html)
+
 ### Objects and Classes
 
 - Examples: [class definition](ruby-literacy/objects_and_classes/define_a_class.rb),
