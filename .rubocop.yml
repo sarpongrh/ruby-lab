@@ -77,7 +77,12 @@ Style/NegatedIfElseCondition:
 Style/InverseMethods:
   Exclude:
     - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+    - 'ruby-literacy/control_flow_techniques/not_vs_bang.rb'
 
 Lint/DuplicateBranch:
   Exclude:
     - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+
+Style/Not:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/not_vs_bang.rb'
