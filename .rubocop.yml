@@ -86,3 +86,11 @@ Lint/DuplicateBranch:
 Style/Not:
   Exclude:
     - 'ruby-literacy/control_flow_techniques/not_vs_bang.rb'
+
+Style/IfUnlessModifier:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/conditional_body_assignment.rb'
+
+Style/GuardClause:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/conditional_body_assignment.rb'
