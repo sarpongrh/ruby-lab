@@ -98,3 +98,4 @@ Style/GuardClause:
 Metrics/MethodLength:
   Exclude:
     - 'ruby-literacy/control_flow_techniques/case_when.rb'
+    - ruby-literacy/control_flow_techniques/multiple_when_values.rb
