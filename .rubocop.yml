@@ -94,3 +94,7 @@ Style/IfUnlessModifier:
 Style/GuardClause:
   Exclude:
     - 'ruby-literacy/control_flow_techniques/conditional_body_assignment.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'ruby-literacy/control_flow_techniques/case_when.rb'
