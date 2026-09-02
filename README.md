@@ -25,7 +25,8 @@ The repository uses Ruby 4.0.6. Language references point to the
   for entitlement decisions in a reading application, and
   [conditional modifiers](ruby-literacy/control_flow_techniques/conditional_modifiers.rb), and
   [`not` and `!` negation](ruby-literacy/control_flow_techniques/not_vs_bang.rb), and
-  [conditional-body assignment](ruby-literacy/control_flow_techniques/conditional_body_assignment.rb)
+  [conditional-body assignment](ruby-literacy/control_flow_techniques/conditional_body_assignment.rb), and
+  [`case` and `when` branches](ruby-literacy/control_flow_techniques/case_when.rb)
 - Reference: [control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html)
 
 ### Objects and Classes
