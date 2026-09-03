@@ -29,7 +29,7 @@ p connection_category.connection_matches?(error)
 integrity_category = SqlStateCategory.new('23')
 connection_error = DatabaseError.new('08006')
 DatabaseError.new('23505')
-DatabaseError.new('42PfG')
+DatabaseError.new('42P01')
 
 actual_error = connection_error
 classification = case actual_error
