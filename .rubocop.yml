@@ -23,6 +23,7 @@ Style/OneClassPerFile:
     - ruby-literacy/objects_and_classes/class_variables.rb
     - ruby-literacy/objects_and_classes/class_instance_variables.rb
     - 'ruby-literacy/control_flow_techniques/if_elsif_else.rb'
+    - ruby-literacy/control_flow_techniques/custom_case_equality.rb
 
 
 Style/TrivialAccessors:
