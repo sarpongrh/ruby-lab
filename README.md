@@ -26,7 +26,8 @@ The repository uses Ruby 4.0.6. Language references point to the
   [conditional modifiers](ruby-literacy/control_flow_techniques/conditional_modifiers.rb), and
   [`not` and `!` negation](ruby-literacy/control_flow_techniques/not_vs_bang.rb), and
   [conditional-body assignment](ruby-literacy/control_flow_techniques/conditional_body_assignment.rb), and
-  [`case` and `when` branches](ruby-literacy/control_flow_techniques/case_when.rb)
+  [`case` and `when` branches](ruby-literacy/control_flow_techniques/case_when.rb), and
+  [case equality with ranges](ruby-literacy/control_flow_techniques/case_equality.rb)
 - Reference: [control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html)
 
 ### Objects and Classes
