@@ -1,13 +1,13 @@
-module MyFirstModule
-  def greet
-    puts 'Hello'
+module RehearsalLogging
+  def report_start
+    puts 'Starting migration rehearsal.'
   end
 end
 
-# Modules get mixed into classes using include method
-class ModuleTester
-  include MyFirstModule
+# Modules add their instance methods to classes through include.
+class MigrationExecutor
+  include RehearsalLogging
 end
 
-mt = ModuleTester.new
-mt.greet
+migration_executor = MigrationExecutor.new
+migration_executor.report_start

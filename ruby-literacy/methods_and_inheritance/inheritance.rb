@@ -1,13 +1,16 @@
 # Inheritance lets a subclass reuse and extend behavior from its superclass.
-class Publication
-  attr_accessor :publisher
+class MigrationArtifact
+  attr_accessor :owner
 end
 
-class Magazine < Publication
-  attr_accessor :editor
+class MigrationReport < MigrationArtifact
+  attr_accessor :reviewer
 end
 
-mag = Magazine.new
-mag.publisher = 'David A. Black'
-mag.editor = 'Joe Leo'
-puts "Mag is published by #{mag.publisher} and edited by #{mag.editor}"
+migration_report = MigrationReport.new
+migration_report.owner = 'Database team'
+migration_report.reviewer = 'Release engineer'
+puts(
+  "The report is owned by #{migration_report.owner} and reviewed by " \
+  "#{migration_report.reviewer}."
+)

@@ -1,6 +1,6 @@
 # Ruby Lab
 
-Focused Ruby language practice and small programming experiments.
+An evolving personal Ruby lab for developing deeper language fluency.
 
 The repository uses Ruby 4.0.6. Language references point to the
 [official Ruby 4.0 documentation](https://docs.ruby-lang.org/en/4.0/).
@@ -22,7 +22,7 @@ The repository uses Ruby 4.0.6. Language references point to the
 ### Control Flow Techniques
 
 - Examples: [`if`, `elsif`, and `else`](ruby-literacy/control_flow_techniques/if_elsif_else.rb)
-  for entitlement decisions in a reading application, and
+  for migration-execution decisions, and
   [conditional modifiers](ruby-literacy/control_flow_techniques/conditional_modifiers.rb), and
   [`not` and `!` negation](ruby-literacy/control_flow_techniques/not_vs_bang.rb), and
   [conditional-body assignment](ruby-literacy/control_flow_techniques/conditional_body_assignment.rb), and
@@ -86,13 +86,14 @@ The repository uses Ruby 4.0.6. Language references point to the
 
 ## Programs
 
-- [Interactive Celsius-to-Fahrenheit conversion](programs/c2f.rb)
-- [File-based Celsius-to-Fahrenheit conversion](programs/c2f_file.rb)
-- [Getter and setter example](programs/setter_and_getter.rb)
+- [Interactive Celsius-to-Fahrenheit conversion](programs/interactive_celsius_to_fahrenheit.rb)
+- [File-based Celsius-to-Fahrenheit conversion](programs/file_based_celsius_to_fahrenheit.rb)
+- [Migration window getters](programs/setter_and_getter.rb)
 - [Rake tasks](programs/Rakefile)
 
 Program data is kept in [`programs/input_files/`](programs/input_files/) and
-[`programs/output_files/`](programs/output_files/).
+[`programs/output_files/`](programs/output_files/). Generated output files
+belong in the output directory.
 
 ## Setup
 
@@ -112,3 +113,24 @@ Run the linter:
 ```bash
 bundle exec rubocop --cache false
 ```
+
+Run the dependency audit:
+
+```bash
+bundle exec bundle-audit check --update
+```
+
+## Quality Checks
+
+Pull requests run RuboCop, Bundler Audit, and Gitleaks.
+
+## Attribution
+
+This repository is a personal Ruby lab for developing deeper language fluency.
+It is informed in part by
+[*The Well-Grounded Rubyist, Fourth Edition*](https://www.manning.com/books/the-well-grounded-rubyist-fourth-edition)
+by David A. Black and Joseph Leo III.
+
+Examples use my own scenarios and commentary. The book and its original
+examples remain the property of their respective copyright holders. The
+[MIT License](LICENSE) applies to my contributions to this repository.

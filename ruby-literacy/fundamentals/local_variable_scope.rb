@@ -1,26 +1,26 @@
-def say_goodbye
-  x = 'Goodbye'
-  puts x
+def prepare_rollback
+  phase = 'rollback'
+  puts phase
 end
 
-def start_here
-  x = 'Hello'
-  puts x
-  say_goodbye
-  puts "Let's check whether x remained the same: "
-  puts x
+def start_rehearsal
+  phase = 'preflight'
+  puts phase
+  prepare_rollback
+  puts 'The phase in start_rehearsal is still:'
+  puts phase
 end
 
-start_here
+start_rehearsal
 
-# Each method has its own local variable named x.
-# Calling say_goodbye does not change x inside start_here.
-def say_both
-  str = 'Hello'
-  abc = str
-  str = 'Goodbye'
-  puts str
-  puts abc
+# Each method has its own local variable named phase.
+# Calling prepare_rollback does not change phase inside start_rehearsal.
+def compare_phases
+  original_phase = 'preflight'
+  preserved_phase = original_phase
+  original_phase = 'rollback'
+  puts original_phase
+  puts preserved_phase
 end
 
-say_both
+compare_phases

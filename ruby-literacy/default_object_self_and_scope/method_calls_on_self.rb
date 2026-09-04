@@ -1,16 +1,16 @@
-class Person
-  attr_accessor :first_name, :middle_name, :last_name
+class TableTarget
+  attr_accessor :database, :schema, :table
 
-  def whole_name
-    n = "#{first_name} "
-    n << "#{middle_name} " if middle_name
-    n << last_name
+  def qualified_name
+    name = "#{database}."
+    name << "#{schema}." if schema
+    name << table
   end
 end
 
-richard = Person.new
-richard.first_name = 'Richard'
-richard.last_name = 'Sarpong'
-puts "Richard's whole name: #{richard.whole_name}"
-richard.middle_name = 'Jr'
-puts "Richard's whole name: #{richard.whole_name}"
+table_target = TableTarget.new
+table_target.database = 'billing'
+table_target.table = 'invoices'
+puts "Table target: #{table_target.qualified_name}"
+table_target.schema = 'reporting'
+puts "Table target: #{table_target.qualified_name}"

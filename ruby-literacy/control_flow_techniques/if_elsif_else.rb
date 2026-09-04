@@ -1,22 +1,22 @@
-class Ebook
-  attr_reader :asset_id, :access_tier, :status
+class MigrationRequest
+  attr_reader :request_id, :risk_tier, :status
 
-  def initialize(asset_id, access_tier, status)
-    @asset_id = asset_id
-    @access_tier = access_tier
+  def initialize(request_id, risk_tier, status)
+    @request_id = request_id
+    @risk_tier = risk_tier
     @status = status
   end
 
-  def purchasable?
-    unless @status == :published
+  def ready?
+    unless @status == :ready
       false
     else
       true
     end
   end
 
-  def purchasable_with_negation?
-    if !(@status == :published)
+  def ready_with_negation?
+    if !(@status == :ready)
       false
     else
       true
@@ -24,23 +24,23 @@ class Ebook
   end
 end
 
-class Reader
-  attr_reader :reader_assets
+class ChangeOperator
+  attr_reader :approved_request_ids
 
   def initialize
-    @reader_assets = []
+    @approved_request_ids = []
   end
 
-  def grant_entitlement(asset_id)
-    @reader_assets << asset_id
+  def grant_approval(request_id)
+    @approved_request_ids << request_id
   end
 
-  def can_read?(ebook)
-    if ebook.status != :published
+  def can_run?(migration_request)
+    if migration_request.status != :ready
       false
-    elsif ebook.access_tier == :free
+    elsif migration_request.risk_tier == :low
       true
-    elsif @reader_assets.include?(ebook.asset_id)
+    elsif @approved_request_ids.include?(migration_request.request_id)
       true
     else
       false
@@ -48,23 +48,27 @@ class Reader
   end
 end
 
-reader = Reader.new
-p reader.reader_assets
-reader.grant_entitlement('ebook-001')
-p reader.reader_assets
+operator = ChangeOperator.new
+p operator.approved_request_ids
+operator.grant_approval('billing-add-index')
+p operator.approved_request_ids
 
-ebook1 = Ebook.new('ebook-001', :paid, :published)
-p reader.can_read?(ebook1)
-p ebook1.purchasable?
-p ebook1.purchasable_with_negation?
+approved_request = MigrationRequest.new('billing-add-index', :high, :ready)
+p operator.can_run?(approved_request)
+p approved_request.ready?
+p approved_request.ready_with_negation?
 
-ebook2 = Ebook.new('ebook-002', :free, :draft)
-p reader.can_read?(ebook2)
-p ebook2.purchasable?
-p ebook2.purchasable_with_negation?
+draft_request = MigrationRequest.new('billing-add-column', :low, :draft)
+p operator.can_run?(draft_request)
+p draft_request.ready?
+p draft_request.ready_with_negation?
 
-ebook3 = Ebook.new('ebook-003', :free, :published)
-p reader.can_read?(ebook3)
+low_risk_request = MigrationRequest.new('analytics-add-index', :low, :ready)
+p operator.can_run?(low_risk_request)
 
-ebook4 = Ebook.new('ebook-004', :paid, :published)
-p reader.can_read?(ebook4)
+unapproved_high_risk_request = MigrationRequest.new(
+  'analytics-add-constraint',
+  :high,
+  :ready
+)
+p operator.can_run?(unapproved_high_risk_request)

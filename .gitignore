@@ -2,3 +2,4 @@
 vendor/bundle/
 coverage/
 .DS_Store
+programs/output_files/*.out
