@@ -1,34 +1,33 @@
-class Person
-  def self.people
-    @people ||= []
+class MigrationRun
+  def self.runs
+    @runs ||= []
   end
 
-  attr_reader :name, :hobbies, :friends
+  attr_reader :name, :tags, :reviewers
 
   def initialize(name)
     @name = name
-    @hobbies = []
-    @friends = []
-    Person.people << self
+    @tags = []
+    @reviewers = []
+    MigrationRun.runs << self
   end
 
-  def add_hobby(hobby)
-    @hobbies << hobby
+  def add_tag(tag)
+    @tags << tag
   end
 
-  def add_friend(friend)
-    @friends << friend
+  def add_reviewer(reviewer)
+    @reviewers << reviewer
   end
 
   def self.method_missing(method_name, *args)
     if method_name.start_with?('all_with_')
       attribute = method_name[9..]
-      raise ArgumentError, "Can't find #{attribute}" unless public_method_defined?(attribute)
+      raise ArgumentError, "Cannot find #{attribute}" unless public_method_defined?(attribute)
 
-      people.find_all do |person|
-        person.send(attribute).include?(args[0])
+      runs.find_all do |run|
+        run.public_send(attribute).include?(args[0])
       end
-
     else
       super
     end
@@ -44,11 +43,11 @@ class Person
   end
 end
 
-e = Person.new('Eric J.')
-r = Person.new('James')
-e.add_friend(r)
-e.add_hobby('Reading')
-r.add_hobby('Painting')
+billing_run = MigrationRun.new('billing-add-index')
+analytics_run = MigrationRun.new('analytics-add-constraint')
+billing_run.add_reviewer('Release engineer')
+billing_run.add_tag('indexing')
+analytics_run.add_tag('locking')
 
-h = Person.all_with_hobbies('Reading')
-puts "#{h.first.name} is into #{h.first.hobbies.join(', ')}."
+matching_runs = MigrationRun.all_with_tags('indexing')
+puts "#{matching_runs.first.name} has tags: #{matching_runs.first.tags.join(', ')}."

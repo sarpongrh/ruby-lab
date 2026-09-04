@@ -1,47 +1,53 @@
-# The Knowledge needed for the program to do anything useful resides in the object
-ticket = Object.new
+# The data needed for a migration rehearsal resides in the object.
+migration = Object.new
 
-def ticket.date
-  '1903-01-02'
+def migration.scheduled_for
+  '2026-09-04'
 end
 
-def ticket.venue
-  'Town Hall'
+def migration.target
+  'billing.invoices'
 end
 
-def ticket.event
-  "Author's reading"
+def migration.operation
+  'add_index'
 end
 
-def ticket.performer
-  'Mark Twain'
+def migration.owner
+  'Database team'
 end
 
-def ticket.seat
-  'Second Balcony, row J, seat 12'
+def migration.strategy
+  'concurrently'
 end
 
-def ticket.price
-  5.50
+def migration.lock_timeout_seconds
+  30
 end
 
-puts "This ticket is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}."
-puts "The performer is #{ticket.performer}."
-puts "The seat is #{ticket.seat}, and it costs $#{format('%.2f', ticket.price)}."
+puts(
+  "This migration will #{migration.operation} on #{migration.target} " \
+  "at #{migration.scheduled_for}."
+)
+puts "The owner is the #{migration.owner}."
+puts(
+  "The strategy is #{migration.strategy}, with a " \
+  "#{migration.lock_timeout_seconds}-second lock timeout."
+)
 
-def ticket.availability_status
-  'sold'
+def migration.execution_status
+  'ready'
 end
 
-def ticket.available?
-  false
+def migration.ready?
+  true
 end
 
-def ticket.print_details(*details)
-  details.each { |detail| puts "This ticket is #{detail}" }
-  puts 'This ticket is non-refundable.'
-  puts 'This ticket is non-transferable.'
-  puts 'This ticket is in a non-smoking section.'
+def migration.print_details(*details)
+  details.each { |detail| puts "This migration is #{detail}" }
+  puts 'This migration requires a rollback plan.'
+  puts 'This migration requires monitoring.'
+  puts 'This migration requires review before execution.'
 end
 
-ticket.print_details(ticket.availability_status)
+migration.print_details(migration.execution_status)

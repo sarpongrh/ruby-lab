@@ -1,19 +1,19 @@
-class Ticket
-  def event
-    "Can't really be specified yet..."
+class MigrationPlan
+  def operation
+    'Not specified yet...'
   end
 end
 
-ticket = Ticket.new
-puts ticket.event
+migration_plan = MigrationPlan.new
+puts migration_plan.operation
 
 # Reopening classes
 
-class C
+class RehearsalDraft
   # This class will be reopened with new methods
 end
 
 # Adding a new method
-class C
-  def x; end
+class RehearsalDraft
+  def validate; end
 end

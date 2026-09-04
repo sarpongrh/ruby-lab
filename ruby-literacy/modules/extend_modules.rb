@@ -1,9 +1,9 @@
-module Loud
-  def shout
-    "#{upcase}!!!"
+module TraceLabel
+  def trace_label
+    "#{upcase}:REHEARSAL"
   end
 end
 
-str = 'Hello'
-str.extend(Loud)
-puts str.shout
+operation_name = 'add_index'
+operation_name.extend(TraceLabel)
+puts operation_name.trace_label

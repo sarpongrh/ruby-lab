@@ -1,16 +1,16 @@
-def change_string(str)
-  str.replace('New string content!')
+def change_migration_state(state)
+  state.replace('validated')
 end
 
-# s= "Original string content"
-# change_string(s)
-# puts s
+# state = 'pending'
+# change_migration_state(state)
+# puts state
 
-# Duplication protects the original object; freezing prevents mutation.
-s = 'Original string content!'
-change_string(s.dup) # to duplicate an object
-puts s
+# Duplicating the state protects the original object; freezing prevents mutation.
+state = 'pending'
+change_migration_state(state.dup)
+puts state
 
-# s = "Original string content!"
-# s.freeze
-# change_string(s)
+# state = 'pending'
+# state.freeze
+# change_migration_state(state)

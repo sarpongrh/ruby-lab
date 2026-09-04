@@ -1,23 +1,23 @@
-class Ebook
+class MigrationRequest
   attr_reader :status
 
   def initialize(status)
     @status = status
   end
 
-  def purchase_block_reason
-    'Ebook is not published' unless @status == :published
+  def execution_block_reason
+    'Migration request is not approved' unless @status == :approved
   end
 
-  def publication_message
-    'Ebook is available' if @status == :published
+  def execution_message
+    'Migration request is ready to execute' if @status == :approved
   end
 end
 
-ebook1 = Ebook.new(:published)
-p ebook1.purchase_block_reason
-p ebook1.publication_message
+approved_request = MigrationRequest.new(:approved)
+p approved_request.execution_block_reason
+p approved_request.execution_message
 
-ebook2 = Ebook.new(:draft)
-p ebook2.purchase_block_reason
-p ebook2.publication_message
+draft_request = MigrationRequest.new(:draft)
+p draft_request.execution_block_reason
+p draft_request.execution_message

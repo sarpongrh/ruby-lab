@@ -1,46 +1,46 @@
-# Valid variable names in ruby by type
+# Valid Ruby variable names by type.
 
 # Local variable:
-first_name = 'Richard'
-puts first_name
+database_name = 'billing'
+puts database_name
 
-# @first_name is an instance variable that belongs to each RubyLearner object.
-class RubyLearner
-  def initialize(first_name)
-    @first_name = first_name
+# @run_id is an instance variable that belongs to each MigrationRun object.
+class MigrationRun
+  def initialize(run_id)
+    @run_id = run_id
   end
 
-  def introduce
-    puts "Hello #{@first_name}"
+  def display_run_id
+    puts @run_id
   end
 end
 
-learner = RubyLearner.new('Ama')
-learner.introduce
+migration_run = MigrationRun.new('run-20260904-001')
+migration_run.display_run_id
 
-# @@session_count is shared state associated with the class hierarchy
-# rather than with one individual StudySession object.
-class StudySession
-  @@session_count = 0
+# @@run_count is shared state associated with the class hierarchy
+# rather than with one individual RehearsalBatch object.
+class RehearsalBatch
+  @@run_count = 0
 
   def initialize
-    @@session_count += 1
+    @@run_count += 1
   end
 
-  def self.session_count
-    @@session_count
+  def self.run_count
+    @@run_count
   end
 end
 
-StudySession.new
-StudySession.new
+RehearsalBatch.new
+RehearsalBatch.new
 
-puts StudySession.session_count
+puts RehearsalBatch.run_count
 
-$learning_language = 'Ruby'
+$default_database = 'billing'
 
-def display_learning_language
-  puts $learning_language
+def display_default_database
+  puts $default_database
 end
 
-display_learning_language
+display_default_database

@@ -1,47 +1,48 @@
-class Book
+class MigrationExperiment
   @@categories = []
-  @@books = {}
+  @@migrations = {}
   attr_reader :category, :title
 
-  def self.register_category(category)
+  def self.register_migration_category(category)
     return if @@categories.include?(category)
 
     @@categories << category
-    @@books[category] = 0
+    @@migrations[category] = 0
   end
-  @@total_books = 0
-  def self.total_books
-    @@total_books
+  @@total_migrations = 0
+  def self.total_migrations
+    @@total_migrations
   end
 
   def initialize(title, category)
-    raise "There is no such category: #{category}." unless @@categories.include?(category)
+    raise "No such migration category: #{category}." unless @@categories.include?(category)
 
-    puts "Creating a new book in  #{category} category!"
+    puts "Creating a new migration in  #{category} category!"
     @category = category
     @title = title
-    @@books[category] += 1
-    @@total_books += 1
+    @@migrations[category] += 1
+    @@total_migrations += 1
   end
 
   def same_category_count
-    @@books[category]
+    @@migrations[category]
   end
 end
 
-class TechnicalBook < Book
+class ConcurrentWorkloadExperiment < MigrationExperiment
 end
 
-Book.register_category('Programming')
-Book.register_category('Machine Learning')
+MigrationExperiment.register_migration_category('indexing')
+MigrationExperiment.register_migration_category('locking')
+MigrationExperiment.register_migration_category('constraints')
 
-book1 = Book.new('The-Well Grounded Rubyist', 'Programming')
-Book.new('Mathematics for Machine Learning', 'Machine Learning')
+migration_one = MigrationExperiment.new('add customer lookup index', 'indexing')
+MigrationExperiment.new('validate foreign key addition', 'locking')
 
-puts book1.title
-puts book1.category
-puts book1.same_category_count
+puts migration_one.title
+puts migration_one.category
+puts migration_one.same_category_count
 
-TechnicalBook.new('Metaprogramming', 'Programming')
-puts Book.total_books
-puts TechnicalBook.total_books
+ConcurrentWorkloadExperiment.new('measure concurrent index behaviour', 'constraints')
+puts MigrationExperiment.total_migrations
+puts ConcurrentWorkloadExperiment.total_migrations

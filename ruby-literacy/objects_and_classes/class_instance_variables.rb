@@ -1,34 +1,34 @@
-class Book
+class MigrationExperiment
   @categories = []
-  @books = {}
-  @total_books = 0
+  @migrations = {}
+  @total_migrations = 0
   attr_reader :title, :category
 
-  def self.register_category(category)
+  def self.register_migration_category(category)
     return if @categories.include?(category)
 
     @categories << category
-    @books[category] = 0
+    @migrations[category] = 0
   end
 
   class << self
-    attr_reader :total_books
+    attr_reader :total_migrations
   end
 
   def self.category_count(category)
-    @books[category]
+    @migrations[category]
   end
 
   def same_category_count
-    Book.category_count(category)
+    MigrationExperiment.category_count(category)
   end
 
   def self.increase_category_count(category)
-    @books[category] += 1
+    @migrations[category] += 1
   end
 
-  def self.increase_total_books_count
-    @total_books += 1
+  def self.increase_total_migrations_count
+    @total_migrations += 1
   end
 
   def self.category_registered?(category)
@@ -36,28 +36,30 @@ class Book
   end
 
   def initialize(title, category)
-    raise "There is no such category: #{category}" unless Book.category_registered?(category)
+    unless MigrationExperiment.category_registered?(category)
+      raise "There is no such category: #{category}"
+    end
 
-    puts "Creating a new book in #{category} category!"
+    puts "Creating a new migration in #{category} category!"
     @category = category
     @title = title
-    Book.increase_category_count(category)
-    Book.increase_total_books_count
+    MigrationExperiment.increase_category_count(category)
+    MigrationExperiment.increase_total_migrations_count
   end
 end
 
-class TechnicalBook < Book
+class ConcurrentWorkloadExperiment < MigrationExperiment
 end
 
-Book.register_category('Programming')
-Book.register_category('Machine Learning')
-Book.register_category('Databases')
+MigrationExperiment.register_migration_category('Indexing')
+MigrationExperiment.register_migration_category('Locking')
+MigrationExperiment.register_migration_category('Constraints')
 
-book1 = Book.new('The-Well Grounded Rubyist', 'Programming')
-Book.new('Python Distilled', 'Programming')
-Book.new('PostgreSQL 16 Administration Cookbook', 'Databases')
-TechnicalBook.new('Metaprogramming Ruby', 'Programming')
+migration_one = MigrationExperiment.new('add customer lookup index', 'Indexing')
+MigrationExperiment.new('measure concurrent index behaviour', 'Locking')
+MigrationExperiment.new('validate foreign key addition', 'Constraints')
+ConcurrentWorkloadExperiment.new("drop old accounts schema's", 'Constraints')
 
-puts book1.same_category_count
-p Book.total_books
-p TechnicalBook.total_books
+puts migration_one.same_category_count
+p MigrationExperiment.total_migrations
+p ConcurrentWorkloadExperiment.total_migrations

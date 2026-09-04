@@ -1,17 +1,17 @@
 require_relative 'stacklike'
 
-class Stack
-  include Stacklike
+class RollbackPlan
+  include RollbackStackBehavior
 end
 
-s = Stack.new
-s.add_to_stack('item one')
-s.add_to_stack('item two')
-s.add_to_stack('item three')
-puts 'Objects currently on the stack:'
-puts s.stack
-taken = s.take_from_stack
-puts 'Removed this object:'
-puts taken
-puts 'Now on stack:'
-puts s.stack
+rollback_plan = RollbackPlan.new
+rollback_plan.add_rollback_step('restore constraint')
+rollback_plan.add_rollback_step('drop replacement index')
+rollback_plan.add_rollback_step('restore application writes')
+puts 'Rollback steps currently on the stack:'
+puts rollback_plan.rollback_steps
+taken_step = rollback_plan.take_rollback_step
+puts 'Removed this rollback step:'
+puts taken_step
+puts 'Rollback steps now on the stack:'
+puts rollback_plan.rollback_steps

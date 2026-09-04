@@ -1,15 +1,15 @@
-class Person
-  def set_name(string)
-    puts "Setting person's name..."
-    @name = string
+class MigrationRun
+  def set_run_id(string)
+    puts 'Setting migration run ID...'
+    @run_id = string
   end
 
-  def get_name
-    puts "Returning the person's name..."
-    @name
+  def get_run_id
+    puts 'Returning the migration run ID...'
+    @run_id
   end
 end
 
-joe = Person.new
-joe.set_name('Joe')
-puts joe.get_name
+migration_run = MigrationRun.new
+migration_run.set_run_id('run-20260904-001')
+puts migration_run.get_run_id

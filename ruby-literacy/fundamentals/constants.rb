@@ -1,11 +1,12 @@
-class Tickets
-  # Constants
-  VENUES = ['Convention Center', 'Market Square', 'Town Hall']
-  def initialize(venue, date)
-    raise ArgumentError, "Unknown venue #{venue}" unless VENUES.include?(venue)
+class MigrationPlan
+  SUPPORTED_OPERATIONS = %w[add_index add_constraint add_column]
 
-    @venue = venue
+  def initialize(operation, target)
+    unless SUPPORTED_OPERATIONS.include?(operation)
+      raise ArgumentError, "Unsupported migration operation: #{operation}"
+    end
 
-    @date = date
+    @operation = operation
+    @target = target
   end
 end

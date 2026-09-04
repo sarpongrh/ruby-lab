@@ -1,13 +1,14 @@
-# attr_accessor :price provides the same reader and writer behavior as:
-# attr_reader :price
-# attr_writer :price
+# attr_accessor :lock_timeout_seconds provides the same reader and writer
+# behavior as:
+# attr_reader :lock_timeout_seconds
+# attr_writer :lock_timeout_seconds
 
-class Ticket
-  attr_reader :venue, :date
-  attr_accessor :price
+class MigrationWindow
+  attr_reader :database, :scheduled_for
+  attr_accessor :lock_timeout_seconds
 
-  def initialize(venue, date)
-    @venue = venue
-    @date = date
+  def initialize(database, scheduled_for)
+    @database = database
+    @scheduled_for = scheduled_for
   end
 end
