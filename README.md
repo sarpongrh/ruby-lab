@@ -8,7 +8,7 @@ The repository uses Ruby 4.0.6. Language references point to the
 ## Structure
 
 - [`ruby-literacy/`](ruby-literacy/) contains focused language examples grouped by topic.
-- [`programs/`](programs/) contains small runnable programs that apply those concepts.
+- [`programs/`](programs/) contains runnable programs that apply those concepts.
 
 ## Learning Map
 
