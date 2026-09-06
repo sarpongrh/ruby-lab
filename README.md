@@ -31,8 +31,9 @@ The repository uses Ruby 4.0.6. Language references point to the
   [custom case equality with SQLSTATE categories](ruby-literacy/control_flow_techniques/custom_case_equality.rb), and
   [a retry controller using `loop`, `next`, and `break`](ruby-literacy/control_flow_techniques/loop_retry_controller.rb)
   with an attempt limit and success or failure outcomes, and
-  [a replica lag monitor using `while`](ruby-literacy/control_flow_techniques/while_replica_lag_monitor.rb)
-  that reads simulated samples until lag reaches 10 ms or less, or samples run out
+  replica lag monitors using [`while`](ruby-literacy/control_flow_techniques/while_replica_lag_monitor.rb)
+  and [`until`](ruby-literacy/control_flow_techniques/until_replica_lag_monitor.rb)
+  that read simulated samples until lag reaches 10 ms or less, or samples run out
 - Reference: [control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html)
 
 ### Objects and Classes
