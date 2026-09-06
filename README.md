@@ -14,80 +14,93 @@ The repository uses Ruby 4.0.6. Language references point to the
 
 ### Fundamentals
 
-- Examples: [variable naming](ruby-literacy/fundamentals/variable_naming_rules.rb),
-  [constants](ruby-literacy/fundamentals/constants.rb), and
-  [local scope](ruby-literacy/fundamentals/local_variable_scope.rb)
-- Reference: [assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/assignment_rdoc.html)
+- [Variable naming](ruby-literacy/fundamentals/variable_naming_rules.rb)
+- [Constants](ruby-literacy/fundamentals/constants.rb)
+- [Local scope](ruby-literacy/fundamentals/local_variable_scope.rb)
+
+Reference: [Assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/assignment_rdoc.html).
 
 ### Control Flow Techniques
 
-- Examples: [`if`, `elsif`, and `else`](ruby-literacy/control_flow_techniques/if_elsif_else.rb)
-  for migration-execution decisions, and
-  [conditional modifiers](ruby-literacy/control_flow_techniques/conditional_modifiers.rb), and
-  [`not` and `!` negation](ruby-literacy/control_flow_techniques/not_vs_bang.rb), and
-  [conditional-body assignment](ruby-literacy/control_flow_techniques/conditional_body_assignment.rb), and
-  [`case` and `when` branches](ruby-literacy/control_flow_techniques/case_when.rb), and
-  [case equality with ranges](ruby-literacy/control_flow_techniques/case_equality.rb), and
-  [custom case equality with SQLSTATE categories](ruby-literacy/control_flow_techniques/custom_case_equality.rb), and
-  [a retry controller using `loop`, `next`, and `break`](ruby-literacy/control_flow_techniques/loop_retry_controller.rb)
-  with an attempt limit and success or failure outcomes, and
-  replica lag monitors using [`while`](ruby-literacy/control_flow_techniques/while_replica_lag_monitor.rb)
-  and [`until`](ruby-literacy/control_flow_techniques/until_replica_lag_monitor.rb)
-  that read simulated samples until lag reaches 10 ms or less, or samples run out
-- Reference: [control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html)
+- [`if`, `elsif`, and `else`](ruby-literacy/control_flow_techniques/if_elsif_else.rb):
+  make migration-execution decisions.
+- [Conditional modifiers](ruby-literacy/control_flow_techniques/conditional_modifiers.rb)
+- [`not` and `!` negation](ruby-literacy/control_flow_techniques/not_vs_bang.rb)
+- [Conditional-body assignment](ruby-literacy/control_flow_techniques/conditional_body_assignment.rb)
+- [`case` and `when` branches](ruby-literacy/control_flow_techniques/case_when.rb)
+- [Case equality with ranges](ruby-literacy/control_flow_techniques/case_equality.rb)
+- [Custom case equality with SQLSTATE categories](ruby-literacy/control_flow_techniques/custom_case_equality.rb)
+- [Retry controller using `loop`, `next`, and `break`](ruby-literacy/control_flow_techniques/loop_retry_controller.rb):
+  limit attempts and stop on success or permanent failure.
+- [Replica lag monitor using `while`](ruby-literacy/control_flow_techniques/while_replica_lag_monitor.rb):
+  process simulated samples while lag exceeds 10 ms and samples remain.
+- [Replica lag monitor using `until`](ruby-literacy/control_flow_techniques/until_replica_lag_monitor.rb):
+  stop when lag reaches 10 ms or less, or samples run out.
+
+Reference: [Control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html).
 
 ### Objects and Classes
 
-- Examples: [class definition](ruby-literacy/objects_and_classes/define_a_class.rb),
-  [object creation](ruby-literacy/objects_and_classes/object_creation.rb),
-  [default object behavior](ruby-literacy/objects_and_classes/object_default_behavior.rb),
-  [object references](ruby-literacy/objects_and_classes/object_references.rb),
-  [object initialization](ruby-literacy/objects_and_classes/initialize_obj_with_state.rb),
-  [instance variables](ruby-literacy/objects_and_classes/instance_var_and_obj_state.rb),
-  [setter methods](ruby-literacy/objects_and_classes/setter_methods.rb),
-  [validated setters](ruby-literacy/objects_and_classes/validated_setter.rb),
-  [attribute accessors](ruby-literacy/objects_and_classes/attribute_accessors.rb), and
-  [anonymous classes](ruby-literacy/objects_and_classes/anonymous_classes.rb),
-  [class variables](ruby-literacy/objects_and_classes/class_variables.rb), and
-  [class instance variables](ruby-literacy/objects_and_classes/class_instance_variables.rb)
-- References: [classes](https://docs.ruby-lang.org/en/4.0/Class.html) and
-  [modules and classes](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html), and
-  [assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/assignment_rdoc.html)
+- [Class definition](ruby-literacy/objects_and_classes/define_a_class.rb)
+- [Object creation](ruby-literacy/objects_and_classes/object_creation.rb)
+- [Default object behavior](ruby-literacy/objects_and_classes/object_default_behavior.rb)
+- [Object references](ruby-literacy/objects_and_classes/object_references.rb)
+- [Object initialization](ruby-literacy/objects_and_classes/initialize_obj_with_state.rb)
+- [Instance variables](ruby-literacy/objects_and_classes/instance_var_and_obj_state.rb)
+- [Setter methods](ruby-literacy/objects_and_classes/setter_methods.rb)
+- [Validated setters](ruby-literacy/objects_and_classes/validated_setter.rb)
+- [Attribute accessors](ruby-literacy/objects_and_classes/attribute_accessors.rb)
+- [Anonymous classes](ruby-literacy/objects_and_classes/anonymous_classes.rb)
+- [Class variables](ruby-literacy/objects_and_classes/class_variables.rb)
+- [Class instance variables](ruby-literacy/objects_and_classes/class_instance_variables.rb)
+
+References: [Classes](https://docs.ruby-lang.org/en/4.0/Class.html),
+[modules and classes](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html),
+[assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/assignment_rdoc.html).
 
 ### Default Object Self and Scope
 
-- Examples: [implicit `self` in method calls](ruby-literacy/default_object_self_and_scope/method_calls_on_self.rb)
-  and [global and local variable scope](ruby-literacy/default_object_self_and_scope/scope_and_visibility.rb)
-- References: [calling methods and receivers](https://docs.ruby-lang.org/en/4.0/syntax/calling_methods_rdoc.html)
-  and [scope](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html)
+- [Implicit `self` in method calls](ruby-literacy/default_object_self_and_scope/method_calls_on_self.rb)
+- [Global and local variable scope](ruby-literacy/default_object_self_and_scope/scope_and_visibility.rb)
+
+References: [Calling methods and receivers](https://docs.ruby-lang.org/en/4.0/syntax/calling_methods_rdoc.html),
+[scope](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html).
 
 ### Methods and Inheritance
 
-- Examples: [method arguments](ruby-literacy/methods_and_inheritance/method_arguments.rb),
-  [inheritance](ruby-literacy/methods_and_inheritance/inheritance.rb),
-  [method hierarchies](ruby-literacy/methods_and_inheritance/method_hierarchies.rb), and
-  [`method_missing` and `super`](ruby-literacy/methods_and_inheritance/method_missing_and_super.rb), and
-  [private methods](ruby-literacy/methods_and_inheritance/private_methods.rb)
-- References: [method definitions and arguments](https://docs.ruby-lang.org/en/4.0/syntax/methods_rdoc.html),
-  [inheritance, visibility, and `super`](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html),
-  [`Method`](https://docs.ruby-lang.org/en/4.0/Method.html), and
-  [`BasicObject#method_missing`](https://docs.ruby-lang.org/en/4.0/BasicObject.html)
+- [Method arguments](ruby-literacy/methods_and_inheritance/method_arguments.rb)
+- [Inheritance](ruby-literacy/methods_and_inheritance/inheritance.rb)
+- [Method hierarchies](ruby-literacy/methods_and_inheritance/method_hierarchies.rb)
+- [`method_missing` and `super`](ruby-literacy/methods_and_inheritance/method_missing_and_super.rb)
+- [Private methods](ruby-literacy/methods_and_inheritance/private_methods.rb)
+
+References: [Method definitions and arguments](https://docs.ruby-lang.org/en/4.0/syntax/methods_rdoc.html),
+[inheritance, visibility, and `super`](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html),
+[`Method`](https://docs.ruby-lang.org/en/4.0/Method.html),
+[`BasicObject#method_missing`](https://docs.ruby-lang.org/en/4.0/BasicObject.html).
 
 ### Modules
 
-- Examples: [module creation](ruby-literacy/modules/creating_a_module.rb),
-  [extending an object](ruby-literacy/modules/extend_modules.rb),
-  [the `Stacklike` mixin](ruby-literacy/modules/stacklike.rb), and
-  [a stack using the mixin](ruby-literacy/modules/stack.rb)
-- Reference: [modules and mixins](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html)
+- [Module creation](ruby-literacy/modules/creating_a_module.rb)
+- [Extending an object](ruby-literacy/modules/extend_modules.rb)
+- [The `Stacklike` mixin](ruby-literacy/modules/stacklike.rb)
+- [A stack using the mixin](ruby-literacy/modules/stack.rb)
+
+Reference: [Modules and mixins](https://docs.ruby-lang.org/en/4.0/syntax/modules_and_classes_rdoc.html).
 
 ### Loading and Dependencies
 
-- Examples: [`require_relative`](ruby-literacy/loading_and_dependencies/load_demo.rb),
-  [the loaded file](ruby-literacy/loading_and_dependencies/loadee.rb), and
-  [a gem dependency](ruby-literacy/loading_and_dependencies/gems_demo.rb)
-- References: [`Kernel`](https://docs.ruby-lang.org/en/4.0/Kernel.html) and
-  [RubyGems guides](https://guides.rubygems.org/)
+- [`require_relative`](ruby-literacy/loading_and_dependencies/load_demo.rb)
+- [The loaded file](ruby-literacy/loading_and_dependencies/loadee.rb)
+- [A gem dependency](ruby-literacy/loading_and_dependencies/gems_demo.rb)
+
+References: [`Kernel`](https://docs.ruby-lang.org/en/4.0/Kernel.html),
+[RubyGems guides](https://guides.rubygems.org/).
+
+### Algorithms
+
+- [Iterative binary search](ruby-literacy/control_flow_techniques/binary_search.rb):
+  search a sorted array using a `while` loop.
 
 ## Programs
 
@@ -129,13 +142,16 @@ bundle exec bundle-audit check --update
 
 Pull requests run RuboCop, Bundler Audit, and Gitleaks.
 
-## Attribution
+## Learning Resources and Attribution
 
 This repository is a personal Ruby lab for developing deeper language fluency.
-It is informed in part by
-[*The Well-Grounded Rubyist, Fourth Edition*](https://www.manning.com/books/the-well-grounded-rubyist-fourth-edition)
-by David A. Black and Joseph Leo III.
+It is informed in part by these resources:
 
-Examples use my own scenarios and commentary. The book and its original
+- [*The Well-Grounded Rubyist, Fourth Edition*](https://www.manning.com/books/the-well-grounded-rubyist-fourth-edition)
+  by David A. Black and Joseph Leo III.
+- [*Grokking Algorithms, Second Edition*](https://www.manning.com/books/grokking-algorithms-second-edition)
+  by Aditya Y. Bhargava.
+
+Examples use my own scenarios and commentary. The books and their original
 examples remain the property of their respective copyright holders. The
 [MIT License](LICENSE) applies to my contributions to this repository.
