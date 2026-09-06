@@ -100,6 +100,7 @@ Metrics/MethodLength:
   Exclude:
     - 'ruby-literacy/control_flow_techniques/case_when.rb'
     - ruby-literacy/control_flow_techniques/multiple_when_values.rb
+    - ruby-literacy/control_flow_techniques/binary_search.rb
 
 Style/CaseEquality:
   Exclude:
