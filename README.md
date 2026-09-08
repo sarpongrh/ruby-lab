@@ -36,6 +36,8 @@ Reference: [Assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/a
   process simulated samples while lag exceeds 10 ms and samples remain.
 - [Replica lag monitor using `until`](ruby-literacy/control_flow_techniques/until_replica_lag_monitor.rb):
   stop when lag reaches 10 ms or less, or samples run out.
+- [`yield` with batch processing](ruby-literacy/control_flow_techniques/yield.rb):
+  pass each batch number to a caller-provided block and return a completion status.
 
 Reference: [Control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html).
 
