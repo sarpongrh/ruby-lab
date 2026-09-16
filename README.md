@@ -38,6 +38,8 @@ Reference: [Assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/a
   stop when lag reaches 10 ms or less, or samples run out.
 - [`yield` with batch processing](ruby-literacy/control_flow_techniques/yield.rb):
   pass each batch number to a caller-provided block and return a completion status.
+- [Custom `each` and `map` methods](ruby-literacy/control_flow_techniques/each_map.rb):
+  iterate over query latencies and collect classifications using blocks.
 
 Reference: [Control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html).
 
