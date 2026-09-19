@@ -40,6 +40,8 @@ Reference: [Assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/a
   pass each batch number to a caller-provided block and return a completion status.
 - [Custom `each` and `map` methods](ruby-literacy/control_flow_techniques/each_map.rb):
   iterate over query latencies and collect classifications using blocks.
+- [Variable scope within a block](ruby-literacy/control_flow_techniques/variable_within_a_block.rb):
+  update an outer counter while keeping block parameters and block-local variables separate.
 
 Reference: [Control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html).
 
