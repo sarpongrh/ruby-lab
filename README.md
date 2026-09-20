@@ -42,6 +42,8 @@ Reference: [Assignment and variables](https://docs.ruby-lang.org/en/4.0/syntax/a
   iterate over query latencies and collect classifications using blocks.
 - [Variable scope within a block](ruby-literacy/control_flow_techniques/variable_within_a_block.rb):
   update an outer counter while keeping block parameters and block-local variables separate.
+- [Block parameter binding](ruby-literacy/control_flow_techniques/parameter_binding.rb):
+  bind yielded values to required, optional, and rest parameters.
 
 Reference: [Control expressions](https://docs.ruby-lang.org/en/4.0/syntax/control_expressions_rdoc.html).
 
@@ -147,6 +149,7 @@ bundle exec bundle-audit check --update
 ## Quality Checks
 
 Pull requests run RuboCop, Bundler Audit, and Gitleaks.
+Dependabot checks for Ruby gem and GitHub Actions updates weekly and opens update PRs.
 
 ## Learning Resources and Attribution
 
