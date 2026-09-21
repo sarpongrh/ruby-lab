@@ -5,12 +5,32 @@ An evolving personal Ruby lab for developing deeper language fluency.
 The repository uses Ruby 4.0.6. Language references point to the
 [official Ruby 4.0 documentation](https://docs.ruby-lang.org/en/4.0/).
 
+[Learning map](#learning-map) | [Programs](#programs) | [Quality checks](#quality-checks)
+
+## Quick Start
+
+With `mise` installed, run these commands from the repository root:
+
+```bash
+mise install
+mise exec -- bundle install
+```
+
+Run an example:
+
+```bash
+mise exec -- bundle exec ruby ruby-literacy/methods_and_inheritance/method_hierarchies.rb
+```
+
 ## Structure
 
 - [`ruby-literacy/`](ruby-literacy/) contains focused language examples grouped by topic.
 - [`programs/`](programs/) contains runnable programs that apply those concepts.
 
 ## Learning Map
+
+Examples are grouped by concept rather than book or chapter. Pick a topic below
+and run its file separately; the reference links provide the language details.
 
 ### Fundamentals
 
@@ -121,34 +141,24 @@ Program data is kept in [`programs/input_files/`](programs/input_files/) and
 [`programs/output_files/`](programs/output_files/). Generated output files
 belong in the output directory.
 
-## Setup
-
-```bash
-mise install
-bundle install
-```
-
-Run an example from the repository root:
-
-```bash
-bundle exec ruby ruby-literacy/methods_and_inheritance/method_hierarchies.rb
-```
+## Quality Checks
 
 Run the linter:
 
 ```bash
-bundle exec rubocop --cache false
+mise exec -- bundle exec rubocop --cache false
 ```
 
 Run the dependency audit:
 
 ```bash
-bundle exec bundle-audit check --update
+mise exec -- bundle exec bundle-audit check --update
 ```
 
-## Quality Checks
+Pull requests run RuboCop for linting, Bundler Audit for known dependency
+vulnerabilities, and Gitleaks for exposed secrets. Run the relevant examples
+locally too; CI does not execute every lab.
 
-Pull requests run RuboCop, Bundler Audit, and Gitleaks.
 Dependabot checks for Ruby gem and GitHub Actions updates weekly and opens update PRs.
 
 ## Learning Resources and Attribution
